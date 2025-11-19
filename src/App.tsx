@@ -219,41 +219,41 @@ function ChatPage({ onBack }: { onBack: () => void }) {
             {showQuickQuestions ? '▼' : '▶'} {showQuickQuestions ? 'Hide' : 'Show'} quick questions
           </button>
 
-          <div className={`flex gap-4 mb-6 justify-center transition-all duration-500 ease-in-out overflow-hidden ${
-            showQuickQuestions ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0'
+          <div className={`flex gap-3 mb-6 justify-center transition-all duration-500 ease-in-out overflow-hidden flex-wrap ${
+            showQuickQuestions ? 'max-h-16 opacity-100' : 'max-h-0 opacity-0'
           }`}>
-            <button className="group flex flex-row items-center gap-3 px-6 py-3 bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-all duration-300 hover:shadow-lg hover:border-gray-300 hover:scale-105">
-              <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
-                <User className="w-4 h-4 text-blue-500" />
+            <button className="group flex flex-row items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-all duration-300 hover:shadow-md hover:border-gray-300">
+              <div className="w-5 h-5 rounded-md bg-blue-50 flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
+                <User className="w-3 h-3 text-blue-500" />
               </div>
-              <span className="text-sm font-medium whitespace-nowrap">Me</span>
+              <span className="text-xs font-medium whitespace-nowrap">Me</span>
             </button>
-            <button className="group flex flex-row items-center gap-3 px-6 py-3 bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-all duration-300 hover:shadow-lg hover:border-gray-300 hover:scale-105">
-              <div className="w-8 h-8 rounded-full bg-green-50 flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
-                <FolderKanban className="w-4 h-4 text-green-500" />
+            <button className="group flex flex-row items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-all duration-300 hover:shadow-md hover:border-gray-300">
+              <div className="w-5 h-5 rounded-md bg-green-50 flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
+                <FolderKanban className="w-3 h-3 text-green-500" />
               </div>
-              <span className="text-sm font-medium whitespace-nowrap">Projects</span>
+              <span className="text-xs font-medium whitespace-nowrap">Projects</span>
             </button>
-            <button className="group flex flex-row items-center gap-3 px-6 py-3 bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-all duration-300 hover:shadow-lg hover:border-gray-300 hover:scale-105">
-              <div className="w-8 h-8 rounded-full bg-purple-50 flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
-                <Sparkles className="w-4 h-4 text-purple-500" />
+            <button className="group flex flex-row items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-all duration-300 hover:shadow-md hover:border-gray-300">
+              <div className="w-5 h-5 rounded-md bg-purple-50 flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
+                <Sparkles className="w-3 h-3 text-purple-500" />
               </div>
-              <span className="text-sm font-medium whitespace-nowrap">Skills</span>
+              <span className="text-xs font-medium whitespace-nowrap">Skills</span>
             </button>
-            <button className="group flex flex-row items-center gap-3 px-6 py-3 bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-all duration-300 hover:shadow-lg hover:border-gray-300 hover:scale-105">
-              <div className="w-8 h-8 rounded-full bg-pink-50 flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
-                <Palette className="w-4 h-4 text-pink-500" />
+            <button className="group flex flex-row items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-all duration-300 hover:shadow-md hover:border-gray-300">
+              <div className="w-5 h-5 rounded-md bg-pink-50 flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
+                <Palette className="w-3 h-3 text-pink-500" />
               </div>
-              <span className="text-sm font-medium whitespace-nowrap">Fun</span>
+              <span className="text-xs font-medium whitespace-nowrap">Fun</span>
             </button>
-            <button className="group flex flex-row items-center gap-3 px-6 py-3 bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-all duration-300 hover:shadow-lg hover:border-gray-300 hover:scale-105">
-              <div className="w-8 h-8 rounded-full bg-orange-50 flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
-                <Phone className="w-4 h-4 text-orange-500" />
+            <button className="group flex flex-row items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-all duration-300 hover:shadow-md hover:border-gray-300">
+              <div className="w-5 h-5 rounded-md bg-orange-50 flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
+                <Phone className="w-3 h-3 text-orange-500" />
               </div>
-              <span className="text-sm font-medium whitespace-nowrap">Contact</span>
+              <span className="text-xs font-medium whitespace-nowrap">Contact</span>
             </button>
-            <button className="group flex items-center justify-center w-12 h-12 bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-all duration-300 hover:shadow-lg hover:border-gray-300 hover:scale-105 hover:rotate-90">
-              <svg className="w-5 h-5 text-gray-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button className="group flex items-center justify-center px-3 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-all duration-300 hover:shadow-md hover:border-gray-300">
+              <svg className="w-4 h-4 text-gray-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5v14m7-7H5" />
               </svg>
             </button>
@@ -266,12 +266,12 @@ function ChatPage({ onBack }: { onBack: () => void }) {
               onChange={(e) => setInput(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
               placeholder="Ask me anything"
-              className="w-full px-6 py-4 pr-14 rounded-full border border-gray-200 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+              className="w-full px-6 py-4 pr-14 rounded-lg border border-gray-200 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
             />
             <button
               onClick={handleSendMessage}
               disabled={isLoading || !input.trim()}
-              className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-lg"
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-lg"
             >
               <ArrowRight className="w-5 h-5 text-white" />
             </button>
