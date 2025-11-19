@@ -219,31 +219,41 @@ function ChatPage({ onBack }: { onBack: () => void }) {
             {showQuickQuestions ? '▼' : '▶'} {showQuickQuestions ? 'Hide' : 'Show'} quick questions
           </button>
 
-          <div className={`flex gap-4 mb-6 justify-center transition-all duration-300 ease-in-out overflow-hidden ${
-            showQuickQuestions ? 'max-h-20 opacity-100' : 'max-h-0 opacity-0'
+          <div className={`flex gap-4 mb-6 justify-center transition-all duration-500 ease-in-out overflow-hidden ${
+            showQuickQuestions ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0'
           }`}>
-            <button className="flex flex-col items-center gap-2 px-6 py-3 bg-white border border-gray-200 rounded-2xl hover:bg-gray-50 transition-all duration-200 hover:shadow-md hover:border-gray-300">
-              <User className="w-5 h-5 text-blue-500" />
-              <span className="text-sm font-medium">Me</span>
+            <button className="group flex flex-row items-center gap-3 px-6 py-3 bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-all duration-300 hover:shadow-lg hover:border-gray-300 hover:scale-105">
+              <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
+                <User className="w-4 h-4 text-blue-500" />
+              </div>
+              <span className="text-sm font-medium whitespace-nowrap">Me</span>
             </button>
-            <button className="flex flex-col items-center gap-2 px-6 py-3 bg-white border border-gray-200 rounded-2xl hover:bg-gray-50 transition-all duration-200 hover:shadow-md hover:border-gray-300">
-              <FolderKanban className="w-5 h-5 text-green-500" />
-              <span className="text-sm font-medium">Projects</span>
+            <button className="group flex flex-row items-center gap-3 px-6 py-3 bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-all duration-300 hover:shadow-lg hover:border-gray-300 hover:scale-105">
+              <div className="w-8 h-8 rounded-full bg-green-50 flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
+                <FolderKanban className="w-4 h-4 text-green-500" />
+              </div>
+              <span className="text-sm font-medium whitespace-nowrap">Projects</span>
             </button>
-            <button className="flex flex-col items-center gap-2 px-6 py-3 bg-white border border-gray-200 rounded-2xl hover:bg-gray-50 transition-all duration-200 hover:shadow-md hover:border-gray-300">
-              <Sparkles className="w-5 h-5 text-purple-500" />
-              <span className="text-sm font-medium">Skills</span>
+            <button className="group flex flex-row items-center gap-3 px-6 py-3 bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-all duration-300 hover:shadow-lg hover:border-gray-300 hover:scale-105">
+              <div className="w-8 h-8 rounded-full bg-purple-50 flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
+                <Sparkles className="w-4 h-4 text-purple-500" />
+              </div>
+              <span className="text-sm font-medium whitespace-nowrap">Skills</span>
             </button>
-            <button className="flex flex-col items-center gap-2 px-6 py-3 bg-white border border-gray-200 rounded-2xl hover:bg-gray-50 transition-all duration-200 hover:shadow-md hover:border-gray-300">
-              <Palette className="w-5 h-5 text-pink-500" />
-              <span className="text-sm font-medium">Fun</span>
+            <button className="group flex flex-row items-center gap-3 px-6 py-3 bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-all duration-300 hover:shadow-lg hover:border-gray-300 hover:scale-105">
+              <div className="w-8 h-8 rounded-full bg-pink-50 flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
+                <Palette className="w-4 h-4 text-pink-500" />
+              </div>
+              <span className="text-sm font-medium whitespace-nowrap">Fun</span>
             </button>
-            <button className="flex flex-col items-center gap-2 px-6 py-3 bg-white border border-gray-200 rounded-2xl hover:bg-gray-50 transition-all duration-200 hover:shadow-md hover:border-gray-300">
-              <Phone className="w-5 h-5 text-orange-500" />
-              <span className="text-sm font-medium">Contact</span>
+            <button className="group flex flex-row items-center gap-3 px-6 py-3 bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-all duration-300 hover:shadow-lg hover:border-gray-300 hover:scale-105">
+              <div className="w-8 h-8 rounded-full bg-orange-50 flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
+                <Phone className="w-4 h-4 text-orange-500" />
+              </div>
+              <span className="text-sm font-medium whitespace-nowrap">Contact</span>
             </button>
-            <button className="flex items-center justify-center px-6 py-3 bg-white border border-gray-200 rounded-2xl hover:bg-gray-50 transition-all duration-200 hover:shadow-md hover:border-gray-300">
-              <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button className="group flex items-center justify-center w-12 h-12 bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-all duration-300 hover:shadow-lg hover:border-gray-300 hover:scale-105 hover:rotate-90">
+              <svg className="w-5 h-5 text-gray-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5v14m7-7H5" />
               </svg>
             </button>
