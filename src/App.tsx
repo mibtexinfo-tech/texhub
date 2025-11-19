@@ -131,7 +131,11 @@ function ChatPage({ onBack }: { onBack: () => void }) {
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
-      <header className="border-b border-gray-200 p-6 flex items-center justify-between sticky top-0 z-10 bg-white">
+      <header className="p-6 flex items-center justify-between sticky top-0 z-10 bg-white" style={{
+        background: 'linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8) 80%, rgba(255, 255, 255, 0) 100%)',
+        backdropFilter: 'blur(10px)',
+        WebkitBackdropFilter: 'blur(10px)'
+      }}>
         <button className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
           <div className="w-5 h-5 bg-black rounded flex items-center justify-center">
             <div className="w-3 h-3 bg-white" style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}></div>
@@ -210,49 +214,56 @@ function ChatPage({ onBack }: { onBack: () => void }) {
         </div>
       </div>
 
-      <div className="fixed bottom-0 left-0 right-0 border-t border-gray-200 p-6 bg-white">
+      <div className="fixed bottom-0 left-0 right-0 p-6 bg-white" style={{
+        background: 'linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8) 80%, rgba(255, 255, 255, 0) 100%)',
+        backdropFilter: 'blur(10px)',
+        WebkitBackdropFilter: 'blur(10px)'
+      }}>
         <div className="max-w-4xl mx-auto">
-          <button
-            onClick={() => setShowQuickQuestions(!showQuickQuestions)}
-            className="text-xs text-gray-500 hover:text-gray-700 mb-4 transition-colors"
-          >
-            {showQuickQuestions ? '▼' : '▶'} {showQuickQuestions ? 'Hide' : 'Show'} quick questions
-          </button>
+          <div className="flex justify-center mb-4">
+            <button
+              onClick={() => setShowQuickQuestions(!showQuickQuestions)}
+              className="text-xs text-gray-500 hover:text-gray-700 transition-colors flex items-center gap-2"
+            >
+              {showQuickQuestions ? '▼' : '▶'}
+              <span>{showQuickQuestions ? 'Hide' : 'Show'} quick questions</span>
+            </button>
+          </div>
 
           <div className={`flex gap-3 mb-6 justify-center transition-all duration-500 ease-in-out overflow-hidden flex-wrap ${
             showQuickQuestions ? 'max-h-16 opacity-100' : 'max-h-0 opacity-0'
           }`}>
-            <button className="group flex flex-row items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-all duration-300 hover:shadow-md hover:border-gray-300">
+            <button className="group flex flex-row items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 transition-all duration-300 hover:shadow-md hover:border-gray-300">
               <div className="w-5 h-5 rounded-md bg-blue-50 flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
                 <User className="w-3 h-3 text-blue-500" />
               </div>
               <span className="text-xs font-medium whitespace-nowrap">Me</span>
             </button>
-            <button className="group flex flex-row items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-all duration-300 hover:shadow-md hover:border-gray-300">
+            <button className="group flex flex-row items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 transition-all duration-300 hover:shadow-md hover:border-gray-300">
               <div className="w-5 h-5 rounded-md bg-green-50 flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
                 <FolderKanban className="w-3 h-3 text-green-500" />
               </div>
               <span className="text-xs font-medium whitespace-nowrap">Projects</span>
             </button>
-            <button className="group flex flex-row items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-all duration-300 hover:shadow-md hover:border-gray-300">
+            <button className="group flex flex-row items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 transition-all duration-300 hover:shadow-md hover:border-gray-300">
               <div className="w-5 h-5 rounded-md bg-purple-50 flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
                 <Sparkles className="w-3 h-3 text-purple-500" />
               </div>
               <span className="text-xs font-medium whitespace-nowrap">Skills</span>
             </button>
-            <button className="group flex flex-row items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-all duration-300 hover:shadow-md hover:border-gray-300">
+            <button className="group flex flex-row items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 transition-all duration-300 hover:shadow-md hover:border-gray-300">
               <div className="w-5 h-5 rounded-md bg-pink-50 flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
                 <Palette className="w-3 h-3 text-pink-500" />
               </div>
               <span className="text-xs font-medium whitespace-nowrap">Fun</span>
             </button>
-            <button className="group flex flex-row items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-all duration-300 hover:shadow-md hover:border-gray-300">
+            <button className="group flex flex-row items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 transition-all duration-300 hover:shadow-md hover:border-gray-300">
               <div className="w-5 h-5 rounded-md bg-orange-50 flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
                 <Phone className="w-3 h-3 text-orange-500" />
               </div>
               <span className="text-xs font-medium whitespace-nowrap">Contact</span>
             </button>
-            <button className="group flex items-center justify-center px-3 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-all duration-300 hover:shadow-md hover:border-gray-300">
+            <button className="group flex items-center justify-center px-3 py-2 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 transition-all duration-300 hover:shadow-md hover:border-gray-300">
               <svg className="w-4 h-4 text-gray-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5v14m7-7H5" />
               </svg>
@@ -266,12 +277,12 @@ function ChatPage({ onBack }: { onBack: () => void }) {
               onChange={(e) => setInput(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
               placeholder="Ask me anything"
-              className="w-full px-6 py-4 pr-14 rounded-lg border border-gray-200 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+              className="w-full px-6 py-4 pr-14 rounded-xl border border-gray-200 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
             />
             <button
               onClick={handleSendMessage}
               disabled={isLoading || !input.trim()}
-              className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-lg"
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center hover:bg-blue-600 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-lg"
             >
               <ArrowRight className="w-5 h-5 text-white" />
             </button>
